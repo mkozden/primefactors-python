@@ -11,4 +11,4 @@ print(number)
 print(counter," prime factors")
 for a in range(2,num2+1):
 	if a in primes:
-		print("{}^{}".format(primes.count(a),a))
+		print("{}^{}".format(a,primes.count(a)))
