@@ -7,7 +7,6 @@ for i in range(2,number+1):
 		number = number/i
 		counter = counter + 1
 		primes.append(i)
-print(number)
 print(counter," prime factors")
 for a in range(2,num2+1):
 	if a in primes:
