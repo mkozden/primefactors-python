@@ -1,9 +1,8 @@
+import math
 factinput = int(input("Enter a number:"))
-counter = 0
-print("The primes of ",factinput,"! are:")
+print("The primes of {}! are:".format(factinput))
 primes = []
 for num in range(2,factinput + 1):
-   # prime numbers are greater than 1
    if num > 1:
        for i in range(2,num):
            if (num % i) == 0:
@@ -20,5 +19,7 @@ def factorialprimes(factinput,x):
 
 
 for i in primes:
-    print(i,"^",factorialprimes(factinput,i))
+    print("{}^{}".format(i,factorialprimes(factinput,i)))
+
+print("So {}! is equal to: {}".format(factinput,math.factorial(factinput)))
 
