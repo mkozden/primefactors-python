@@ -16,4 +16,5 @@ def main():
 	for a in primes:
 			print("{}^{}".format(a,primesraw.count(a)))
 
-main()
+if __name__ == "__main__":
+	main()
