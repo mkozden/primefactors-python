@@ -11,6 +11,12 @@ def main():
 			primesraw.append(i)
 		else:
 			i += 1
+		if i < number:
+			percentage = round((i / number) * 100, 2)
+		else:
+			percentage = 100
+		print("{}% done!".format(percentage), end="\r")
+	print("{}% done!".format(percentage))
 	print(counter," prime factors")
 	primes = list(dict.fromkeys(primesraw))
 	for a in primes:
