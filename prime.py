@@ -16,7 +16,7 @@ def main():
 			percentage = round((i / number) * 100, 2)
 		else:
 			percentage = 100
-		print("{}% done!".format(percentage), end="\r")
+		print("{}% done!  ({}/{})".format(percentage,i,int(number)), end="\r")
 	print("{}% done in {} seconds.".format(percentage,time.process_time()))
 	print(counter," prime factors")
 	primes = list(dict.fromkeys(primesraw))
