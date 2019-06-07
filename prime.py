@@ -1,8 +1,6 @@
 import time
-import sys
 def main():
 	number = int(input("enter number:"))
-	num2 = number
 	counter = 0
 	primesraw = []
 	i = 2
@@ -17,14 +15,18 @@ def main():
 		else:
 			remaining = str(remaining) + " seconds left		"
 		return remaining
+
+
 	while i <= number:
 		if number%i == 0:
-			number = number/i
+			number = int(number/i)
 			counter = counter + 1
 			primesraw.append(i)
+		elif i>2:
+			i += 2
 		else:
 			i += 1
-		if i < number and i%100000 == 0: #limiting the number of print calls to minimize speed loss
+		if i < number and i%100001 == 0: #limiting the number of print calls to minimize speed loss
 			percentage = round((i / number) * 100, 2)
 			print("{}% done! {}".format(percentage,remainingtime(i,number)), end="\r")
 		percentage = 100
