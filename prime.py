@@ -1,6 +1,5 @@
 import time
-def main():
-	number = int(input("enter number:"))
+def main(number):
 	counter = 0
 	primesraw = []
 	i = 2
@@ -39,4 +38,5 @@ def main():
 			print("{}^{}".format(a,primesraw.count(a)))
 
 if __name__ == "__main__":
-	main()
+	number = int(input("enter number:"))
+	main(number)
