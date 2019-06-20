@@ -10,10 +10,12 @@ if len(sys.argv) == 1:
 		prime.main(number)
 	elif choice == 2:
 		number = int(input("enter number:"))
-		factorialprime.main()
+		factorialprime.main(number)
 elif len(sys.argv) == 3:
-	choice = sys.argv[1]
+	choice = int(sys.argv[1])
 	if choice == 1:
-		prime.main(sys.argv[2])
+		prime.main(int(sys.argv[2]))
 	elif choice == 2:
-		factorialprime.main(sys.argv[2])
+		factorialprime.main(int(sys.argv[2]))
+else:
+	print("Wrong argument count")
