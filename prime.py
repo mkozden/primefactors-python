@@ -7,8 +7,11 @@ def main(number):
 	primesraw = []
 	i = 2
 
-	def elapsedtime():
-		elapsed = round(time.process_time(), 2)
+	def elapsedtime(r,x,y):
+		if not r:
+			elapsed = round(time.process_time(), 2)
+		elif r:
+			elapsed = round(time.process_time()*((y**0.5)-x)/x, 2)
 		if elapsed >= 31536000:
 			elapsed = str(round(elapsed/31536000)) + " years 		"
 		elif elapsed >= 86400:
@@ -34,12 +37,12 @@ def main(number):
 		else:
 			i += 1
 		percentage = round(i*100/number**0.5, 2)
-		if i % 5001 == 0:
-			print(f"{percgraph(percentage)} {percentage}% | {elapsedtime()}", end="\r", flush=True)
+		if i % 50001 == 0:
+			print(f"{percgraph(percentage)} {percentage}% | {elapsedtime(True,i,number)} left", end="\r", flush=True)
 	primesraw.append(number)
 	counter += 1
 	percentage = 100
-	print("{}% done in {}.".format(percentage, elapsedtime()), flush=True)
+	print("{}% done in {}.".format(percentage, elapsedtime(False,None,None)), flush=True)
 	print(counter, " prime factors")
 	primes = list(dict.fromkeys(primesraw))
 	for a in primes:
